@@ -102,8 +102,8 @@
 
 <header>
 	<img src="images/ReBrincar.png" alt="ReBrincar Logo">
-    <h4>A Plataforma de Aluguer Sustentável para Famílias</h4>
-    <p>ReBrincar é a forma sustentável de aceder a brinquedos, livros e outros itens essenciais de alta qualidate, enquanto protege o planeta e reduz o desperdício.</p>
+    <h4 id="title">A Plataforma de Aluguer Sustentável para Famílias</h4>
+    <p id= "sub-title">ReBrincar é a forma sustentável de aceder a brinquedos, livros e outros itens essenciais de alta qualidate, enquanto protege o planeta e reduz o desperdício.</p>
 	<button class="language-toggle" onclick="toggleLanguage()">EN/PT</button>
 </header>
 
@@ -286,9 +286,10 @@
 		
 		
 		<div class="product-card">
-            <img src="images/call_center.webp" alt="Não encontrou o que procurava?">
-            <h3>Não encontrou o que procurava?</h3>
+            <img src="images/call_center.png" alt="Não encontrou o que procurava?">
+            <h3>Não encontrou o que procurava? Ou está interessado em vender itens usados?</h3>
             <p>Entre em contacto connosco e veja como podemos ajudá-lo a encontrar exatamente o que precisa. Estamos à disposição para esclarecer dúvidas e oferecer soluções personalizadas!
+            Além disso, se tiver artigos de boa qualidade que já não utiliza, considere vendê-los. Estamos interessados em itens usados que estejam em ótimo estado e prontos para ganhar uma nova vida!
 			</p>
 			<button class="rent-button" onclick="location.href='Rent.html?product-name=Não encontrou o que procurava?'">Contactar</button>
         </div>
@@ -307,6 +308,9 @@
 
     function toggleLanguage() {
         if (isPortuguese) {
+			document.getElementById("title").innerText = "The Sustainable Rental Platform for Families";
+            document.getElementById("sub-title").innerHTML = "ReBrincar is the sustainable way to access high-quality toys, books, and other essential items while protecting the planet and reducing waste.";
+            
             // About Us Section
             document.getElementById("about-title").innerText = "About Us";
             document.getElementById("about-story").innerHTML = "<strong>Our Story:</strong> In the heart of Portugal, a small group of eco-conscious parents came together at the intersection of love for their children and a deep concern for the environment. Thus, ReBrincar was born, a sustainable platform where families can rent essential items for their children, promoting a circular economy and reducing waste.";
@@ -324,6 +328,8 @@
 			isPortuguese = false;
         } else {
             // Revert back to Portuguese
+			document.getElementById("title").innerText = "A Plataforma de Aluguer Sustentável para Famílias"
+            document.getElementById("sub-title").innerHTML = "ReBrincar é a forma sustentável de aceder a brinquedos, livros e outros itens essenciais de alta qualidate, enquanto protege o planeta e reduz o desperdício."
             document.getElementById("about-title").innerText = "Sobre Nós";
             document.getElementById("about-story").innerHTML = "<strong>A nossa história:</strong> No coração de Portugal, um pequeno grupo de pais eco-conscientes encontrou-se num ponto de encontro entre o amor pelos seus filhos e uma preocupação profunda pelo meio ambiente. Assim nasceu a ReBrincar, uma plataforma sustentável onde as famílias podem alugar artigos essenciais para os seus filhos, promovendo uma economia circular e reduzindo o desperdício.";
             document.getElementById("about-mission").innerHTML = "<strong>A nossa missão:</strong> A missão da ReBrincar é proporcionar aos pais e cuidadores uma alternativa sustentável, prática e acessível, permitindo que obtenham produtos de alta qualidade para as crianças sem contribuir para o desperdício.";
