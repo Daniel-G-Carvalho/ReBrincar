@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReBrincar - Produtos para Alugar</title>
+    <style>
+        /* Basic styling for layout and colors */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #3E9C7A;
+            color: #fff;
+            padding: 0.5em 0;
+            text-align: center;
+        }
+       header img {
+			width: 200px; /* Reduced logo width */
+			height: auto;
+			vertical-align: middle;
+			margin-right: 8px; /* Space between logo and text */
+		}
+		.language-toggle {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            cursor: pointer;
+            background-color: #fff;
+            color: #3E9C7A;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+        .product-card {
+            flex: 1 1 30%;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .product-card img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .product-card h3 {
+            color: #3E9C7A;
+            font-size: 1em;
+            margin: 10px 0;
+        }
+        .product-card p {
+            font-size: 15px;
+            color: #666;
+            margin: 10px 0;
+        }
+        .rent-button {
+            background-color: #3E9C7A;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        .rent-button:hover {
+            background-color: #358F6D;
+        }
+        footer {
+            background-color: #3E9C7A;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+	<img src="images/ReBrincar.png" alt="ReBrincar Logo">
+    <h4>A Plataforma de Aluguer Sustentável para Famílias</h4>
+    <p>ReBrincar é a forma sustentável de aceder a brinquedos, livros e outros itens essenciais de alta qualidate, enquanto protege o planeta e reduz o desperdício.</p>
+	<button class="language-toggle" onclick="toggleLanguage()">EN/PT</button>
+</header>
+
+<div class="container">
+<!-- About Us Section -->
+   <!-- About Us Section -->
+		<section class="about-us">
+        <h2 id="about-title">Sobre Nós</h2>
+        <p id="about-story"><strong>A nossa história:</strong> No coração de Portugal, um pequeno grupo de pais eco-conscientes encontrou-se num ponto de encontro entre o amor pelos seus filhos e uma preocupação profunda pelo meio ambiente. Assim nasceu a ReBrincar, uma plataforma sustentável onde as famílias podem alugar artigos essenciais para os seus filhos, promovendo uma economia circular e reduzindo o desperdício.</p>
+        <p id="about-mission"><strong>A nossa missão:</strong> A missão da ReBrincar é proporcionar aos pais e cuidadores uma alternativa sustentável, prática e acessível, permitindo que obtenham produtos de alta qualidade para as crianças sem contribuir para o desperdício.</p>
+    </section>
+	
+    <h2 id="product-title">Produtos para alugar</h2>
+    <p id="product-sub-title">Escolha entre uma seleção de produtos infantis de alta qualidade e alugue o que precisa para o seu filho(a).</p>
+	<small>* Os produtos podem diferir ligeiramente da imagem</small>
+
+    <section class="product-list">
+       
+
+        <!-- Product Card 1-->
+        <div class="product-card">
+            <img src="images/train.jpg" alt="Conjunto de Trem de Madeira">
+            <h3>Conjunto de comboio de madeira</h3>
+            <p>Conjunto completo de comboio de madeira com trilhos, perfeito para estimular a imaginação e habilidades motoras. (10€/month)</p>
+			<button class="rent-button" onclick="location.href='Rent.html?product-name=Conjunto de Comboio de Madeira'">Alugar</button>
+        </div>
+
+        <!-- Product Card 2 -->
+		<div class="product-card">
+            <img src="images/cavalo.jpeg" alt="Cavalo de balanço de Madeira">
+            <h3>Cavalo de balanço de Madeira</h3>
+            <p>Cavalo de balanço feito de madeira, proporcionando horas de diversão e desenvolvimento do equilíbrio. (10€/month)</p>
+			<button class="rent-button" onclick="location.href='Rent.html?product-name=Cavalo de Balanço de Madeira'">Alugar</button>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div class="product-card">
+            <img src="images/bicicleta.webp" alt="Bicicleta de Madeira Infantil sem pedais">
+            <h3>Bicicleta de Madeira Infantil sem pedais</h3>
+            <p>Bicicleta segura e confortável para crianças, ideal par atividades ao ar livre e desenvolvimento físico. Sem pedais para praticar o equilíbrio. (10€/month)</p>
+			<button class="rent-button" onclick="location.href='Rent.html?product-name=Bicicleta de Equilíbrio Infantil'">Alugar</button>
+        </div>
+		
+		<!-- Product Card 4 -->
+        <div class="product-card">
+            <img src="images/primeirospassos.png" alt="Primeiros passos Happy Hippy ECO+ Infantil">
+            <h3>Primeiros passos Happy Hippy ECO+ Infantil</h3>
+            <p>Um divertido andarilho em estilo hippie com um novo design feito de plástico reciclado. Possui 4 grandes rodas que garantem a estabilidade do produto e da criança. 
+			Centro de atividades com atividades manuais: rodar a bola com guizo, girar as rodas dentadas, rodar os 3 cilindros e virar a flor.
+	ˇ		Fabricado com 80% de plástico reciclado proveniente de excedentes da produção industrial (corpo do produto, pega, rodas, suporte do corpo e das rodas).
+			(5€/month)
+			</p>
+			<button class="rent-button" onclick="location.href='Rent.html?product-name=Primeiros passos Happy Hippy ECO+ Infantil'">Alugar</button>
+        </div>
+		
+		<!-- Product Card 5 -->
+        <div class="product-card">
+            <img src="images/livros1.jpg" alt="Três livros infantis dos autores Júlia Donaldson e Alex Scheffler">
+            <h3>Três livros infantis dos autores Júlia Donaldson e Alex Scheffler</h3>
+            <p>Descubra o encantador mundo da Floresta de Bolotas. Em <b>As Meias do Sr. Raposo, ajude o Sr. Raposo</b> a encontrar as suas meias perdidas. 
+				Em <b>Esconde-Esconde com a Porquinha, participe numa busca divertida pela Galinha.</b>
+				Já <b>O Bolo de Aniversário da Posi</b> ensina sobre partilha e gratidão quando um bolo de aniversário sofre um acidente inesperado. 
+				Com dimensões práticas e ilustrações encantadoras, estes livros são perfeitos para divertir e ensinar os mais pequenos.
+			(5€/month)
+			</p>
+			<button class="rent-button" onclick="location.href='Rent.html?product-name=Três livros infantis dos autores Júlia Donaldson e Alex Scheffler'">Alugar</button>
+        </div>
+		<!-- Product Card 6 -->
+        <div class="product-card">
+            <img src="images/livros2.jpg" alt="Mix de três livros infantis">
+            <h3>Mix de três livros infantis</h3>
+            <p>Explore o encantador mundo da Floresta de Bolotas com histórias interativas e repletas de humor, criadas pelos autores Júlia Donaldson e Alex Scheffler, responsáveis pelo premiado «O Grufalão». 
+			Ajude a Coelhinha a encontrar um lugar tranquilo para dormir e o Urso a entregar as suas cartas aos amigos, levantando abas para descobrir surpresas ao longo do caminho. 
+			Além disso, descubra <b>Os Meus Animais Favoritos</b>, um livro encantador com ilustrações coloridas que apresenta os animais preferidos das crianças, perfeito para aprender e explorar o mundo animal. 
+			(5€/month)
+			</p>
+			<button class="rent-button" onclick="location.href='Rent.html?product-name=Mix de três livros infantis'">Alugar</button>
+        </div>
+		
+		<!-- Product Card 7 -->
+        <div class="product-card">
+            <img src="images/livros_som.jpg" alt="Dois livros infantis interativos">
+            <h3>Dois livros infantis interativos</h3>
+            <p>Este livro de cartão resistente e seguro apresenta imagens grandes e coloridas, que encantam os mais pequenos, e inclui uma seleção de primeiras palavras relacionadas com o tema, acompanhadas pelos respetivos sons reais, reproduzidos com qualidade excecional. Ideal para entreter as mãozinhas curiosas, basta ligar o módulo na última página e pressionar os botões em cada página para ouvir os sons de alta qualidade.
+			(10€/month)
+			</p>
+			<button class="rent-button" onclick="location.href='Rent.html?product-name=Dois livros infantis interativos'">Alugar</button>
+        </div>
+		<!-- Product Card 8 -->
+        <div class="product-card">
+            <img src="images/puzzles.jpg" alt="Três puzzles infantis">
+            <h3>Três puzzles infantis</h3>
+            <p>Três puzzles encantadores, perfeitos para entreter e estimular a criatividade dos mais pequenos. 
+			Cada puzzle apresenta uma ilustração vibrante e peças resistentes, ideais para mãos pequeninas. 
+			Com peças fáceis de manusear e desenhos que despertam a imaginação, estes puzzles são ideais para incentivar a concentração e a coordenação motora das crianças.
+			(7€/month)
+			</p>
+			<button class="rent-button" onclick="location.href='Rent.html?product-name=Três puzzles infantis'">Alugar</button>
+        </div>
+		<!-- Product Card 9 -->
+        <div class="product-card">
+            <img src="images/bonecos.jpg" alt="Brinquedos para Bebé">
+            <h3>Brinquedos para Bebé</h3>
+            <p>Conjunto de brinquedos seguros e sustentáveis, perfeitos para o desenvolvimento do bebé. 
+			Inclui um chocalho feito de madeira de faia 100% natural, leve e portátil, ideal para estimular a coordenação motora e o desenvolvimento inicial. 
+			Acompanha também um boneco e um doudou feitos de algodão orgânico, sem corantes ou químicos, garantindo segurança total para o bebé brincar livremente. Produtos projetados para combinar diversão com qualidade e sustentabilidade.
+			(10€/month)
+			</p>
+			<button class="rent-button" onclick="location.href='Rent.html?product-name=Brinquedos para Bebé'">Alugar</button>
+        </div>
+		<!-- Product Card 10 -->
+        <div class="product-card">
+            <img src="images/brinquedos.jpg" alt="Brinquedos para Bebé">
+            <h3>Quatro brinquedos para Bebé</h3>
+            <p>Conjunto de brinquedos e acessórios infantis feitos de materiais naturais e macios, ideais para bebés. Inclui um doudou em forma de raposa, perfeito para conforto e aconchego; dois mordedores com argolas de madeira e orelhas macias, ideais para aliviar o desconforto dos primeiros dentes; um coelhinho de tecido, encantador e feito para abraços; e um colar de amamentação com contas de crochê e madeira, projetado para entreter o bebé enquanto mama, proporcionando segurança e praticidade. Brinquedos sustentáveis e pensados para o bem-estar dos mais pequenos.
+			(4€/month)
+			</p>
+			<button class="rent-button" onclick="location.href='Rent.html?product-name=Brinquedos para Bebé'">Alugar</button>
+        </div>
+		
+		<!-- Product Card 11 -->
+        <div class="product-card">
+            <img src="images/instrumentos.jpg" alt="Brinquedos para Bebé">
+            <h3>Instrumentos musicais</h3>
+            <p>
+			Descubra o mundo da música com este conjunto encantador, incluindo um xilofone colorido de som harmonioso, uma pandeireta vibrante e leve, e matracas divertidas que estimulam o ritmo e a criatividade. Perfeitos para mãos pequenas, esses instrumentos são seguros, duráveis e ideais para desenvolver habilidades motoras e auditivas enquanto proporcionam diversão musical.
+			(7€/month)
+			</p>
+			<button class="rent-button" onclick="location.href='Rent.html?product-name=Instrumentos musicais'">Alugar</button>
+        </div>
+		<!-- Product Card 12 -->
+        <div class="product-card">
+            <img src="images/lego_duplo.jpg" alt="LEGO DUPLO A Casa da Árvore 3-em-1 - set de construção criativa">
+            <h3>LEGO DUPLO A Casa da Árvore 3-em-1 - set de construção criativa</h3>
+            <p>
+			Os pequenos aventureiros a partir dos 3 anos descobrem inúmeras formas de se divertirem enquanto exploram o brinquedo LEGO® DUPLO® A Casa da Árvore 3-em-1 (10933). Este set está repleto de funcionalidades para descobrir e pode ser reconstruído de 3 maneiras diferentes para uma construção verdadeiramente criativa.
+			A aprendizagem baseada na brincadeira faz crescer a imaginação
+			(7€/month)
+			</p>
+			<button class="rent-button" onclick="location.href='Rent.html?product-name=Instrumentos musicais'">Alugar</button>
+        </div>
+		<!-- Product Card 12 -->
+        <div class="product-card">
+            <img src="images/triciclo.jpg" alt="triciclo dobrável QPlay Tenco">
+            <h3>Triciclo dobrável QPlay Tenco</h3>
+            <p>
+			O triciclo dobrável QPlay Tenco é perfeito para levar em aventuras. Ele é fácil de dobrar com o botão sob o assento, tornando-o ideal para transportar. Além disso, o QPlay Tenco possui roda livre e um guiador ajustável/removível para guiar a criança e o triciclo. Sob o assento, há também um compartimento para levar todos os itens importantes. O QPlay Tenco é adequado para crianças de 2 a 6 anos, com peso máximo de 25 kg.
+			(10€/month)
+			</p>
+			<button class="rent-button" onclick="location.href='Rent.html?product-name=Instrumentos musicais'">Alugar</button>
+        </div>
+		<!-- Product Card 12 -->
+        <div class="product-card">
+            <img src="images/bicicleta2.jpg" alt="Bicicleta de metal para criança">
+            <h3>Bicicleta de metal para criança sem pedais</h3>
+			<p>Bicicleta segura e confortável para crianças, ideal par atividades ao ar livre e desenvolvimento físico. Sem pedais para praticar o equilíbrio. (10€/month)</p>
+			<button class="rent-button" onclick="location.href='Rent.html?product-name=Instrumentos musicais'">Alugar</button>
+        </div>
+		<!-- Product Card 12 -->
+        <div class="product-card">
+            <img src="images/bike_2_1.jpg" alt="Bicicleta e Trotinete Azul 2 em 1 para Crianças de 1 a 5 Anos">
+            <h3>Bicicleta e Trotinete Azul 2 em 1 para Crianças de 1 a 5 Anos</h3>
+            <p>
+			O Scoot & Ride Highway 1 é uma trotinete 2 em 1 com assento, ideal para crianças de 1 a 6 anos.
+			Criado na Áustria, combina bicicleta e trotinete em um produto prático e fácil de montar, garantindo diversão por anos!
+			(7€/month)
+			</p>
+			<button class="rent-button" onclick="location.href='Rent.html?product-name=Instrumentos musicais'">Alugar</button>
+        </div>
+		<!-- Product Card 12 -->
+        <div class="product-card">
+            <img src="images/trotinete.avif" alt="Trotinete de 3 rodas">
+            <h3>Trotinete de 3 rodas</h3>
+            <p>
+			Trotinete de 3 rodas, fácil para crianças de 80 cm a 1,20m se divertirem a descobrir as primeiras sensações de deslize. Em segurança!
+			(7€/month)
+			</p>
+			<button class="rent-button" onclick="location.href='Rent.html?product-name=Instrumentos musicais'">Alugar</button>
+        </div>
+		
+		
+		<div class="product-card">
+            <img src="images/call_center.webp" alt="Não encontrou o que procurava?">
+            <h3>Não encontrou o que procurava?</h3>
+            <p>Entre em contacto connosco e veja como podemos ajudá-lo a encontrar exatamente o que precisa. Estamos à disposição para esclarecer dúvidas e oferecer soluções personalizadas!
+			</p>
+			<button class="rent-button" onclick="location.href='Rent.html?product-name=Não encontrou o que procurava?'">Contactar</button>
+        </div>
+
+        <!-- Add more product cards as needed -->
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 ReBrincar. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+    // Language toggle functionality
+    let isPortuguese = true;
+
+    function toggleLanguage() {
+        if (isPortuguese) {
+            // About Us Section
+            document.getElementById("about-title").innerText = "About Us";
+            document.getElementById("about-story").innerHTML = "<strong>Our Story:</strong> In the heart of Portugal, a small group of eco-conscious parents came together at the intersection of love for their children and a deep concern for the environment. Thus, ReBrincar was born, a sustainable platform where families can rent essential items for their children, promoting a circular economy and reducing waste.";
+            document.getElementById("about-mission").innerHTML = "<strong>Our Mission:</strong> ReBrincar's mission is to provide parents and caregivers with a sustainable, practical, and accessible alternative, enabling them to obtain high-quality items for children without contributing to waste.";
+
+            // Products Section
+           document.getElementById("product-title").innerText = "Products for Rent";
+		   document.getElementById("product-sub-title").innerText = "Choose from a selection of high-quality children's items and rent what you need for your child.";
+           /*  document.getElementById("product1-title").innerText = "Wooden Toy Box";
+            document.getElementById("product1-desc").innerText = "A sturdy wooden box filled with educational and fun toys for children to explore.";
+            document.getElementById("product2-title").innerText = "Wooden Train Set";
+            document.getElementById("product2-desc").innerText = "Complete wooden train set with tracks, perfect for stimulating imagination and motor skills.";
+            document.getElementById("product3-title").innerText = "Children's Bicycle";
+            document.getElementById("product3-desc").innerText = "Safe and comfortable children's bicycle, ideal for outdoor activities and physical development.";*/
+			isPortuguese = false;
+        } else {
+            // Revert back to Portuguese
+            document.getElementById("about-title").innerText = "Sobre Nós";
+            document.getElementById("about-story").innerHTML = "<strong>A nossa história:</strong> No coração de Portugal, um pequeno grupo de pais eco-conscientes encontrou-se num ponto de encontro entre o amor pelos seus filhos e uma preocupação profunda pelo meio ambiente. Assim nasceu a ReBrincar, uma plataforma sustentável onde as famílias podem alugar artigos essenciais para os seus filhos, promovendo uma economia circular e reduzindo o desperdício.";
+            document.getElementById("about-mission").innerHTML = "<strong>A nossa missão:</strong> A missão da ReBrincar é proporcionar aos pais e cuidadores uma alternativa sustentável, prática e acessível, permitindo que obtenham produtos de alta qualidade para as crianças sem contribuir para o desperdício.";
+
+            // Products Section
+           document.getElementById("product-title").innerText = "Produtos para Alugar";
+		   document.getElementById("product-sub-title").innerText = "Escolha entre uma seleção de produtos infantis de alta qualidade e alugue o que precisa para o seu filho(a).";
+            /* document.getElementById("product1-title").innerText = "Caixa de Brinquedos de Madeira";
+            document.getElementById("product1-desc").innerText = "Uma caixa de madeira robusta cheia de brinquedos educativos e divertidos para as crianças explorarem.";
+            document.getElementById("product2-title").innerText = "Conjunto de Trem de Madeira";
+            document.getElementById("product2-desc").innerText = "Conjunto completo de trem de madeira com trilhos, perfeito para estimular a imaginação e habilidades motoras.";
+            document.getElementById("product3-title").innerText = "Bicicleta Infantil";
+            document.getElementById("product3-desc").innerText = "Bicicleta segura e confortável para crianças, ideal para atividades ao ar livre e desenvolvimento físico.";*/
+			isPortuguese = true
+        }
+        
+    }
+</script>
+
+</body>
+</html>

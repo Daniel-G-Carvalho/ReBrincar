@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReBrincar - Formulário de Aluguer</title>
+    <style>
+        /* Basic styling for layout and colors */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #3E9C7A;
+            color: #fff;
+            padding: 0.5em 0;
+            text-align: center;
+        }
+		header img {
+			width: 200px; /* Reduced logo width */
+			height: auto;
+			vertical-align: middle;
+			margin-right: 8px; /* Space between logo and text */
+		}
+        header h1 {
+            display: inline-block;
+            font-size: 2em;
+            margin: 0;
+            vertical-align: middle;
+        }
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #3E9C7A;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"], input[type="email"], input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #3E9C7A;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        input[type="submit"]:hover {
+            background-color: #358F6D;
+        }
+        footer {
+            background-color: #3E9C7A;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+	<img src="images/ReBrincar.png" alt="ReBrincar Logo">
+    <h4>A Plataforma de Aluguer Sustentável para Famílias</h4>
+    <p>ReBrincar é a forma sustentável de aceder a brinquedos, livros e outros itens essenciais de alta qualidate, enquanto protege o planeta e reduz o desperdício.</p>
+</header>
+
+<div class="container">
+    <h2>Formulário de Aluguer</h2>
+	<form id="contact-form" onsubmit="handleFormSubmit(event)">
+		<label for="product-name">Nome do produto</label>
+		<input type="text" id="product-name" name="product-name" readonly value="Produto Selecionado" style="width: 90%;"></input>
+
+		<label for="user-name">Nome completo</label>
+		<input type="text" id="user-name" name="user-name" required style="width: 90%;"></input>
+
+		<label for="telefone">Telefone</label>
+		<input type="text" id="telefone" name="telefone" required style="width: 50%;"></input>
+
+		<label for="email">Email</label>
+		<input type="email" id="email" name="email" required style="width: 70%;"></input>
+
+		<label for="city">Cidade</label>
+		<input type="text" id="city" name="city" required style="width: 50%;"></input>
+
+		<label for="rental-date">Potencial data de início do aluguer</label>
+		<input type="date" id="rental-date" name="rental-date" required style="width: 50%;"></input>
+
+		<label for="duration">Duração do aluguer (meses)</label>
+		<input type="text" id="duration" name="duration" placeholder="Ex.: 1 mês, 2 meses" required style="width: 50%;"></input>
+
+		<label for="preferred-contact">Forma preferida de contato</label>
+		<div id="preferred-contact" style="width: 90%;">
+			<input type="checkbox" id="contact-email" name="preferred-contact" value="email">Email</input>
+			<input type="checkbox" id="contact-phone" name="preferred-contact" value="phone">Telefone</input>
+		</div>
+		<div id="details">
+		<label for="details">Detalhes adicionais</label>
+		<textarea id="details" name="details" rows="10" style="width: 95%;" placeholder="Deixe-nos saber qualquer informação extra relevante"></textarea>
+		</div>
+
+		<center><input type="submit" value="Confirmar Aluguer"></center>
+	</form>
+
+<p>Após preencher o formulário, a nossa equipa entrará em contacto consigo para confirmar os detalhes.</p>
+
+</div>
+
+<footer>
+    <p>&copy; 2024 ReBrincar. Todos os direitos reservados.</p>
+</footer>
+
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "MXoZEUA1CYINtMOTz",
+      });
+   })();
+</script>
+
+</script>
+<script>
+
+	function handleFormSubmit(event) {
+        event.preventDefault(); // Prevent default form submission behavior
+
+
+        // Redirect to another page
+        window.location.href = "Success.html";
+    }
+
+
+	/*emailjs.sendForm('service_ka4espo', 'template_yeayh87', '#contact-form').then(
+	  (response) => {
+		console.log('SUCCESS!', response.status, response.text);
+			
+	// Simulate form submission
+        alert("Obrigado! O seu formulário foi enviado com sucesso. A nossa equipa entrará em contacto consigo em breve.");
+
+        // Redirect to another page
+        window.location.href = "Success.html";
+	  },
+	  (error) => {
+		console.log('FAILED...', error);
+		alert('Ocorreu um erro ao submeter o formulário. Tente mais tarde');
+	  },
+	);*/
+
+   
+</script>
+
+</body>
+</html>
